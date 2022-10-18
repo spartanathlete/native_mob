@@ -16,13 +16,12 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Button button = (Button)findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button btn = (Button)findViewById(R.id.button);
+
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
-                Intent i=new Intent(getApplicationContext(),NewsActivity.class);
-                startActivity(i);
+                startActivity(new Intent(LoginActivity.this, NewsActivity.class));
             }
         });
     }
